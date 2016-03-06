@@ -1,0 +1,6 @@
+framework module Pods_Xafurdaria {
+  umbrella header "Pods-Xafurdaria-umbrella.h"
+
+  export *
+  module * { export * }
+}
