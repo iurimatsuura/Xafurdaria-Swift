@@ -14,12 +14,25 @@ protocol ResponseHandlerProtocol {
 }
 
 class ResponseHandler: NSObject {
-
+    //Array of ResponseHandlerProtocol objects.
     var observers:[ResponseHandlerProtocol]? = [ResponseHandlerProtocol]()
 
     init(observers:[ResponseHandlerProtocol]?) {
         if let obs = observers {
             self.observers = obs
         }
+    }
+}
+
+extension ResponseHandler : NetworkManagerObserver
+{
+    func responseDidFail(error:NSError) {
+        for observer in observers! {
+            observer.handleError(error)
+        }
+    }
+    
+    func responseDidSucceed(result: AnyObject?) {
+        return
     }
 }

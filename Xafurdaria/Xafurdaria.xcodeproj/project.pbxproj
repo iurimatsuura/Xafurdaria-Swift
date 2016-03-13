@@ -36,8 +36,9 @@
 		8C4977451C8CA11200BDC684 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4977441C8CA11200BDC684 /* APIManager.swift */; };
 		8C49774A1C8CA3E500BDC684 /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4977491C8CA3E500BDC684 /* ResponseHandler.swift */; };
 		8C49774C1C8CA4A700BDC684 /* PlaylistResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C49774B1C8CA4A700BDC684 /* PlaylistResponseHandler.swift */; };
+		8C59055E1C958B8400D44B9A /* VideoResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C59055D1C958B8400D44B9A /* VideoResponseHandler.swift */; };
 		8C7276741C8C656E00F600F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7276731C8C656E00F600F2 /* AppDelegate.swift */; };
-		8C7276761C8C656E00F600F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7276751C8C656E00F600F2 /* ViewController.swift */; };
+		8C7276761C8C656E00F600F2 /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7276751C8C656E00F600F2 /* VideoListViewController.swift */; };
 		8C7276791C8C656E00F600F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C7276771C8C656E00F600F2 /* Main.storyboard */; };
 		8C72767B1C8C656E00F600F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C72767A1C8C656E00F600F2 /* Assets.xcassets */; };
 		8C72767E1C8C656E00F600F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C72767C1C8C656E00F600F2 /* LaunchScreen.storyboard */; };
@@ -95,9 +96,10 @@
 		8C4977441C8CA11200BDC684 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = Network/APIManager.swift; sourceTree = "<group>"; };
 		8C4977491C8CA3E500BDC684 /* ResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseHandler.swift; path = Network/Handlers/ResponseHandler.swift; sourceTree = "<group>"; };
 		8C49774B1C8CA4A700BDC684 /* PlaylistResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaylistResponseHandler.swift; path = Network/Handlers/PlaylistResponseHandler.swift; sourceTree = "<group>"; };
+		8C59055D1C958B8400D44B9A /* VideoResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoResponseHandler.swift; path = Network/Handlers/VideoResponseHandler.swift; sourceTree = "<group>"; };
 		8C7276701C8C656E00F600F2 /* Xafurdaria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xafurdaria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7276731C8C656E00F600F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C7276751C8C656E00F600F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8C7276751C8C656E00F600F2 /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
 		8C7276781C8C656E00F600F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C72767A1C8C656E00F600F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C72767D1C8C656E00F600F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -211,7 +213,7 @@
 		8C4977361C8C710C00BDC684 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8C7276751C8C656E00F600F2 /* ViewController.swift */,
+				8C7276751C8C656E00F600F2 /* VideoListViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -239,6 +241,7 @@
 			children = (
 				8C4977491C8CA3E500BDC684 /* ResponseHandler.swift */,
 				8C49774B1C8CA4A700BDC684 /* PlaylistResponseHandler.swift */,
+				8C59055D1C958B8400D44B9A /* VideoResponseHandler.swift */,
 			);
 			name = Handlers;
 			sourceTree = "<group>";
@@ -506,8 +509,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C4977451C8CA11200BDC684 /* APIManager.swift in Sources */,
-				8C7276761C8C656E00F600F2 /* ViewController.swift in Sources */,
+				8C7276761C8C656E00F600F2 /* VideoListViewController.swift in Sources */,
 				8C4977401C8C754300BDC684 /* Video.swift in Sources */,
+				8C59055E1C958B8400D44B9A /* VideoResponseHandler.swift in Sources */,
 				8C4977431C8C77D000BDC684 /* NetworkManager.swift in Sources */,
 				8C7276741C8C656E00F600F2 /* AppDelegate.swift in Sources */,
 				8C49773C1C8C749100BDC684 /* VideoCell.swift in Sources */,
